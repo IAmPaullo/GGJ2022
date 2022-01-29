@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private Transform mesh;
     private Rigidbody rb;
 
     public static Action DeathAction;
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 vel = rb.velocity;
         if (vel != Vector3.zero)
-            transform.forward = vel;
+            mesh.forward = vel;
     }
 
     public void Move()
