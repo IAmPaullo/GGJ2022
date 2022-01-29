@@ -34,14 +34,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Fade: 0.75
     - _Fresnel_Intensity: 1
     - _GlowSpread: 1.32
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
+    - _Fade_Range: {r: -3.29, g: 1, b: 0, a: 0}
     - _Fresnel_Color: {r: 0, g: 0.14411765, b: 0.25, a: 1}
     - _Interior_Color: {r: 0.9481919, g: 1, b: 0, a: 1}
-    - _Interior_Pos: {r: 0, g: 0.02, b: 0, a: 0}
+    - _Interior_Pos: {r: 0.36, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1988284246087042092
 MonoBehaviour:
