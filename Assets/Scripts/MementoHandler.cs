@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,12 @@ public class MementoHandler : MonoBehaviour
 {
     [SerializeField] private Transform target, follower;
     [SerializeField] private int queueSize;
+    [SerializeField] private float nearDist;
     private Queue<Memento> mementoQueue;
+    public static Action CloserAction;
+    public static Action EnterCloserAction;
+    public static Action ExitCloserAction;
+    private bool isNear;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +30,25 @@ public class MementoHandler : MonoBehaviour
             Memento memento = mementoQueue.Dequeue();
             follower.position = memento.position;
             follower.rotation = memento.rotation;
+            NearZoneHandler();
         }
         else if (follower.gameObject.active)
-        {
             follower.gameObject.SetActive(false);
+    }
+
+    public void NearZoneHandler()
+    {
+        if (Vector3.Distance(target.position, follower.position) < nearDist)
+        {
+            CloserAction?.Invoke();
+            if (!isNear)
+                EnterCloserAction?.Invoke();
+            isNear = true;
+        }
+        else if (isNear)
+        {
+            ExitCloserAction?.Invoke();
+            isNear = false;
         }
     }
 
