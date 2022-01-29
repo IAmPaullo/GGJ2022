@@ -106,8 +106,8 @@ Material:
     - _DstBlend: 10
     - _EnvironmentReflections: 1
     - _Fade: 0.338
-    - _Fresnel_Value: 1
-    - _Fresnel_Visibility: 0.314
+    - _Fresnel_Value: 0
+    - _Fresnel_Visibility: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -129,7 +129,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0, g: 0.18325162, b: 1, a: 1}
+    - _Color: {r: 0, g: 1, b: 0.9283836, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fade_Range: {r: -0.14, g: 0.43, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
