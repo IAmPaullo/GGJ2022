@@ -3,13 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private Transform mesh;
-    [SerializeField] Volume globalEffectVolume;
     private Rigidbody rb;
 
     public static Action DeathAction;
@@ -22,14 +20,14 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         MementoHandler.CloserAction += Socorro;
-        MementoHandler.EnterCloserAction += CloseDistance;
-        MementoHandler.ExitCloserAction += FarDistance;
+        MementoHandler.EnterCloserAction += TaPerto;
+        MementoHandler.ExitCloserAction += TaLonge;
     }
     private void OnDisable()
     {
         MementoHandler.CloserAction -= Socorro;
-        MementoHandler.EnterCloserAction -= CloseDistance;
-        MementoHandler.ExitCloserAction -= FarDistance;
+        MementoHandler.EnterCloserAction -= TaPerto;
+        MementoHandler.ExitCloserAction -= TaLonge;
     }
 
     // Update is called once per frame
@@ -61,17 +59,17 @@ public class PlayerMovement : MonoBehaviour
             DeathAction?.Invoke();
         }
     }
+
     private void Socorro()
     {
         print("AAAAAAAAAAAh");
-        globalEffectVolume.weight = 1;
     }
-    private void CloseDistance()
+    private void TaPerto()
     {
-        globalEffectVolume.weight = 1;
+        print("Ele ta aqui");
     }
-    private void FarDistance()
+    private void TaLonge()
     {
-        globalEffectVolume.weight = 0;
+        print("Fugi!");
     }
 }

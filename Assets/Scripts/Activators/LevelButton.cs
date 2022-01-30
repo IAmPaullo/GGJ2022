@@ -5,13 +5,18 @@ using UnityEngine;
 
 public class LevelButton : Activator
 {
-    private void OnTriggerEnter(Collider other)
+    bool active;
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Shadow") || 
             other.gameObject.layer == LayerMask.NameToLayer("Player") || 
             other.gameObject.layer == LayerMask.NameToLayer("Box"))
         {
-            enableAction?.Invoke();
+            if (!active)
+            {
+                active = true;
+                enableAction?.Invoke();
+            }
         }
     }
 
@@ -21,6 +26,7 @@ public class LevelButton : Activator
             other.gameObject.layer == LayerMask.NameToLayer("Player") || 
             other.gameObject.layer == LayerMask.NameToLayer("Box"))
         {
+            active = false;
             disableAction?.Invoke();
         }
     }

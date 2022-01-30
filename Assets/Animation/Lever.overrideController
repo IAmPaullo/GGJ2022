@@ -6,14 +6,14 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Door
+  m_Name: Lever
   m_Controller: {fileID: 9100000, guid: 25f29bc740fd8d24b903e2ae2c9ba853, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: -4133177448722675529, guid: 5c8fccaa5792e2d40883acb59529b2c3,
       type: 3}
-    m_OverrideClip: {fileID: 5933177382068113438, guid: 0962a73f762bd1d42be485772db30435,
+    m_OverrideClip: {fileID: -2749374090106232296, guid: 9aa8ad39d67056e40a1359f8e9d6c8dc,
       type: 3}
   - m_OriginalClip: {fileID: 1279595272266813639, guid: 5c8fccaa5792e2d40883acb59529b2c3,
       type: 3}
-    m_OverrideClip: {fileID: 8736401639633930599, guid: 0962a73f762bd1d42be485772db30435,
+    m_OverrideClip: {fileID: -2708181808690489641, guid: 9aa8ad39d67056e40a1359f8e9d6c8dc,
       type: 3}
