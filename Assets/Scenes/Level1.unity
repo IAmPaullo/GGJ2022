@@ -3151,7 +3151,7 @@ MonoBehaviour:
   m_IsGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 1
+  weight: 0
   sharedProfile: {fileID: 11400000, guid: 9ec91e98e8e68ca4ca6aaf9230a0719d, type: 2}
 --- !u!1 &1550811761
 GameObject:
@@ -3397,6 +3397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 400
   mesh: {fileID: 1985955662}
+  globalEffectVolume: {fileID: 1483765488}
 --- !u!136 &1633770753
 CapsuleCollider:
   m_ObjectHideFlags: 0
