@@ -14,6 +14,7 @@ public class LevelButton : Activator
         {
             if (!active)
             {
+                SoundManager.Play("Botao");
                 active = true;
                 enableAction?.Invoke();
             }

@@ -27,6 +27,7 @@ public class Activator : MonoBehaviour
     private void EnableAnim()
     {
         animator.SetBool("Active", true);
+        
     }
     private void DisableAnim()
     {

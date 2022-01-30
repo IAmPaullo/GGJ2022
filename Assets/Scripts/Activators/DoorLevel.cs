@@ -59,6 +59,7 @@ public class DoorLevel : Activatable
     private void Open()
     {
         collider.enabled = false;
+        SoundManager.Play("Portao");
     }
 
     private void Close()

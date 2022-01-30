@@ -14,6 +14,7 @@ public class Lever : Activator
         {
             if (!active)
             {
+                SoundManager.Play("Alavanca");
                 enableAction?.Invoke();
                 if (timer > 0)
                     StartCoroutine(StartTimer());
