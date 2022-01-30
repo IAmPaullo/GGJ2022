@@ -20,4 +20,9 @@ public class SceneHandler : MonoBehaviour
         AsyncOperation op = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
         return op;
     }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
 }
