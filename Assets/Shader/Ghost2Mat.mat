@@ -51,7 +51,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Transparency1: 1
-    - _Transparency2: 0.873
+    - _Transparency2: 0.84
     m_Colors:
     - _Color1: {r: 1, g: 0, b: 0.53342247, a: 1}
     - _Color2: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0}
