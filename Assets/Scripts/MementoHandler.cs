@@ -14,15 +14,16 @@ public class MementoHandler : MonoBehaviour
     public static Action ExitCloserAction;
     private bool isNear;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Application.targetFrameRate = 60;
         mementoQueue = new Queue<Memento>();
         follower.gameObject.SetActive(false);
     }
 
     void FixedUpdate()
     {
-        mementoQueue.Enqueue(new Memento(target.position, target.rotation));
+        mementoQueue.Enqueue(new Memento(target.position, target.GetChild(0).rotation));
         if(mementoQueue.Count >= queueSize)
         {
             if (!follower.gameObject.active)

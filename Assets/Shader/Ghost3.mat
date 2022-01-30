@@ -36,7 +36,7 @@ Material:
     m_Floats:
     - _Fade: 0.75
     - _Fresnel_Intensity: 1
-    - _GlowSpread: 1.32
+    - _GlowSpread: 1.27
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

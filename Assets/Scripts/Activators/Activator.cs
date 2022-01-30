@@ -9,16 +9,16 @@ public class Activator : MonoBehaviour
     public Action disableAction;
     private Animator animator;
 
-    private void Start()
+    public void Awake()
     {
         animator = GetComponent<Animator>();    
     }
-    private void OnEnable()
+    protected void OnEnable()
     {
         enableAction += EnableAnim;
         disableAction += DisableAnim;
     }
-    private void OnDisable()
+    protected void OnDisable()
     {
         enableAction -= EnableAnim;
         disableAction -= DisableAnim;
